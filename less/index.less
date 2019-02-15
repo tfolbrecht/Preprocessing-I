@@ -77,51 +77,64 @@ html, body {
 // 	border: 1px solid black;
 //}
 
+.container {
+	display: flex;
+  }
+
+@media all and (max-width: 600px) {
+  
+.container {
+  flex-wrap: wrap;
+}
+	
+.container > li {
+  flex-basis: 50%;
+}
+  
+}
+
+nav {
+	margin-bottom: 2%
+}
+
 body {
 	font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
+	justify-content: center;
 	height: 100%;
 	padding: 5%;
 }
-
-section {
-	display: flex;
-	width: 80%;
-	padding: @cozy;
-	flex-direction: row;
-}
-
+//
 .blerb {
-	@{test}: @tboxcol;
+	// @{test}: @tboxcol;
+	width: 66%;
 	img {
 		border-radius: 50%;
-		width: 33%;
 	}
 	h1 {
 		font-size: 2rem;
 		color: @texttheme;
+		width: 66%;
 	}
 	p {
 		font-size: @psize * .75;
 		color: @texttheme;
-		width: 50%;
+		width: 66%;
 	}
 }
 
 .skills {
-	@{test}: @tboxcol;
-	padding: @cozy;
+	// @{test}: @tboxcol;
+	padding: 1%;
 }
 
-.work{
-	// padding: @cozy;
+.work {
 }
 
 .work table {
-		font-size: @psize;
-		color: @texttheme;
-		border-spacing: 1%;
+		// @{test}: @tboxcol;
+		padding: 1%;
 	}
 	h1 {
 		font-size: @psize * 1.2;
@@ -133,7 +146,7 @@ section {
 		text-align: left;
 		border: 1px solid black;
 	}
-
+//
 // footer {
 // 	border-top: 3px solid @bgcolor1;
 // 	flex-shrink: 0;
